@@ -3,7 +3,7 @@ import Link from "next/link";
 import { categories } from "@/data/categories";
 import { CategoryCard } from "@/components/CategoryCard";
 import { SearchOverlay } from "@/components/SearchOverlay";
-import { Leaf } from "lucide-react";
+import { ArrowRight, Leaf } from "lucide-react";
 
 export default function MenuCategoriesPage() {
   return (
@@ -16,6 +16,7 @@ export default function MenuCategoriesPage() {
           fill
           className="object-cover object-top"
           priority
+          sizes="(max-width: 448px) 100vw, 448px"
           quality={85}
         />
 
@@ -69,6 +70,7 @@ export default function MenuCategoriesPage() {
         >
           <Leaf size={13} className="text-[#2D4027]" />
           <span>Jain Food</span>
+          <ArrowRight size={13} aria-hidden="true" />
         </Link>
       </div>
 

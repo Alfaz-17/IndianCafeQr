@@ -18,30 +18,31 @@ export default function InfoPage() {
 
   return (
     <div className="min-h-screen bg-[#F5E8D6] pb-12 text-[#2A2118]">
-      <header
-        className="relative w-full overflow-hidden bg-[#2D4027]"
-        style={{ height: "clamp(160px, 47.4vw, 212px)" }}
-      >
+      {/* Top Banner using the authentic info-screen artwork */}
+      <div className="relative w-full aspect-[1182/950] overflow-hidden">
         <Image
-          src="/images/info-banner.png"
-          alt="The Indian Cafe at Lake View, Bhavnagar — Our Info"
+          src="/images/info-screen.webp"
+          alt="The Indian Cafe - Lake View, Bhavnagar"
           fill
+          className="object-cover object-top"
           priority
           sizes="(max-width: 448px) 100vw, 448px"
-          className="object-cover"
+          quality={85}
         />
+
+        {/* Back button */}
         <Link
           href="/menu"
           aria-label="Back to menu"
-          className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#2D4027]/75 text-[#F5E8D6] shadow backdrop-blur-sm transition hover:bg-[#2D4027] active:scale-95"
+          className="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-md transition hover:bg-black/55 shadow active:scale-95"
         >
           <ChevronLeft size={20} strokeWidth={2.5} />
         </Link>
-      </header>
+      </div>
 
       <div className="px-5 pt-5 space-y-5">
         {/* 02. Location and Timings */}
-        <div className="rounded-none bg-[#EEDFC9] p-5 shadow-sm border border-[#EEDFC9]">
+        <div className="rounded-2xl bg-[#EEDFC9] p-5 shadow-sm">
           <div className="space-y-4">
             {/* Location */}
             <div className="flex items-start gap-3.5">
@@ -119,7 +120,7 @@ export default function InfoPage() {
         </div>
 
         {/* 03. Pure Vegetarian Banner */}
-        <div className="rounded-none bg-[#2D4027]/10 p-4 border border-[#2D4027]/20 flex items-center gap-3.5">
+        <div className="rounded-2xl bg-[#2D4027]/10 p-4 border border-[#2D4027]/20 flex items-center gap-3.5">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2D4027] text-white flex-shrink-0 shadow-sm">
             <div className="h-4 w-4 rounded-sm border-2 border-white flex items-center justify-center">
               <div className="h-2 w-2 rounded-full bg-white" />
@@ -151,7 +152,7 @@ export default function InfoPage() {
             {galleryImages.map((img, i) => (
               <figure
                 key={i}
-                className={`group min-w-0 overflow-hidden rounded-none bg-[#EEDFC9] shadow-sm ${i % 2 === 1 ? "mt-7" : ""}`}
+                className={`group min-w-0 overflow-hidden rounded-2xl bg-[#EEDFC9] shadow-sm ${i % 2 === 1 ? "mt-7" : ""}`}
               >
                 <div
                   className="relative w-full overflow-hidden"
@@ -171,7 +172,7 @@ export default function InfoPage() {
         </div>
 
         {/* 05. A Little About Us */}
-        <div className="rounded-none bg-[#EEDFC9] p-5 shadow-sm border border-[#EEDFC9]">
+        <div className="rounded-2xl bg-[#EEDFC9] p-5 shadow-sm">
           <h3
             className="text-base font-bold text-[#2A2118] mb-2"
             style={{ fontFamily: "var(--font-display-var)" }}
