@@ -108,7 +108,6 @@ export default async function CategoryItemsPage({
         {/* Add-on Note */}
         {currentCategory.addOnNote && (
           <div className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-[#EEDFC9] p-3 text-xs font-medium text-[#2D4027]">
-            <Sparkles size={14} className="text-[#C97836]" />
             <span>Add-ons: <strong>{currentCategory.addOnNote}</strong></span>
           </div>
         )}

@@ -114,7 +114,6 @@ export default function JainMenuPage() {
 
         {/* Add-on Note */}
         <div className="flex items-center justify-center gap-2 rounded-xl bg-[#EEDFC9] p-3 text-xs font-medium text-[#2D4027]">
-          <Sparkles size={14} className="text-[#C97836]" />
           <span>Add-ons: <strong>Cheese +₹20 · Mayo +₹20</strong></span>
         </div>
 

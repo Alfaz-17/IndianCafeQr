@@ -19,7 +19,10 @@ export default function InfoPage() {
   return (
     <div className="min-h-screen bg-[#F5E8D6] pb-12 text-[#2A2118]">
       {/* Top Banner using the authentic info-screen artwork */}
-      <div className="relative w-full aspect-[1182/950] overflow-hidden">
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ height: "clamp(250px, 80.25vw, 360px)" }}
+      >
         <Image
           src="/images/info-screen.webp"
           alt="The Indian Cafe - Lake View, Bhavnagar"
