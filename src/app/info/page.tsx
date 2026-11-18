@@ -99,8 +99,9 @@ export default function InfoPage() {
               className="flex items-center justify-center gap-2 rounded-xl bg-[#C97836] py-2.5 px-3 text-xs font-semibold text-white shadow transition hover:bg-[#b0652d] active:scale-95"
             >
               <svg
-                width="14"
-                height="14"
+                aria-hidden="true"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
