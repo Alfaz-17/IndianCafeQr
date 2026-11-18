@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #F5E9DA;
+  --color-cream-dark: #EAD7BE;
+  --color-forest: #2F3E27;
+  --color-forest-deep: #1F2B1A;
+  --color-coffee: #5B3A29;
+  --color-copper: #C8793A;
+  --color-ink: #2A2118;
+  --font-display-var: 'Playfair Display', Georgia, serif;
+  --font-script-var: 'Caveat', cursive, sans-serif;
+  --font-sans-var: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Hide scrollbar for category chips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background: #F5E9DA;
+  color: #2A2118;
+  font-family: var(--font-sans-var);
+}
+
+html {
+  scroll-behavior: smooth;
+}
