@@ -24,7 +24,7 @@ export function MenuItemRow({ item, index }: { item: MenuItem; index: number }) 
           )}
         </div>
       </div>
-      <span className="flex-shrink-0 ml-4 text-[15px] font-bold tabular-nums text-[#5B3A29]">
+      <span className="flex-shrink-0 ml-4 text-[15px] font-bold tabular-nums text-[#2D4027]">
         {formatPriceShort(item.price)}
       </span>
     </motion.li>

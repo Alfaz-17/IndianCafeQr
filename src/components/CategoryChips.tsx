@@ -12,7 +12,7 @@ export function CategoryChips({
   activeSlug: string;
 }) {
   return (
-    <div className="sticky top-0 z-30 bg-[#F5E9DA]/95 backdrop-blur-sm border-b border-[#EAD7BE]">
+    <div className="sticky top-0 z-30 bg-[#F5E8D6]/95 backdrop-blur-sm border-b border-[#EEDFC9]">
       <div className="flex gap-2 overflow-x-auto px-4 py-3 no-scrollbar">
         {categories.map((c) => (
           <Link
@@ -21,8 +21,8 @@ export function CategoryChips({
             className={clsx(
               "flex-shrink-0 rounded-full px-4 py-1.5 text-xs font-semibold transition-all whitespace-nowrap",
               c.slug === activeSlug
-                ? "bg-[#2F3E27] text-[#F5E9DA] shadow-md"
-                : "bg-[#EAD7BE]/70 text-[#5B3A29] hover:bg-[#EAD7BE]"
+                ? "bg-[#2D4027] text-[#F5E8D6] shadow-sm"
+                : "bg-[#EEDFC9] text-[#2A2118] hover:bg-[#e6d5bd]"
             )}
           >
             {c.name}

@@ -32,10 +32,10 @@ export function SearchOverlay() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EAD7BE]/60 text-[#5B3A29] transition hover:bg-[#EAD7BE]"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-md transition hover:bg-black/55 shadow"
         aria-label="Search menu"
       >
-        <Search size={18} strokeWidth={2} />
+        <Search size={18} strokeWidth={2.2} />
       </button>
 
       <AnimatePresence>

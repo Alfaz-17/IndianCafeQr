@@ -14,9 +14,9 @@ export function CategoryCard({ c, index }: { c: Category; index: number }) {
     >
       <Link
         href={`/menu/${c.slug}`}
-        className="flex aspect-square flex-col items-center justify-center gap-1.5 rounded-2xl bg-[#EAD7BE]/60 p-2 text-center shadow-sm transition-all duration-200 active:scale-95 hover:shadow-md hover:bg-[#EAD7BE]/80"
+        className="flex aspect-square flex-col items-center justify-center gap-1.5 rounded-2xl bg-[#EEDFC9] p-2 text-center shadow-sm transition-all duration-200 active:scale-95 hover:shadow-md hover:bg-[#e6d5bd]"
       >
-        {/* Real Food Category Image */}
+        {/* Real Cutout Food Image */}
         <div className="relative flex h-12 w-12 items-center justify-center drop-shadow-sm">
           <Image
             src={c.icon}
