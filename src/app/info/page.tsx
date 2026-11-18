@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function InfoPage() {
   const galleryImages = [
-    { src: "/images/lake-sunset.jpg", title: "Golden Lake Sunset", subtitle: "Evening views across the water" },
-    { src: "/images/lake-view-tree.jpg", title: "Lantern Tree & Seating", subtitle: "Lakeside garden ambiance" },
-    { src: "/images/lake-panorama.jpg", title: "Lake View by Dusk", subtitle: "Peaceful water reflections" },
-    { src: "/images/cafe-exterior.jpg", title: "Evening Entrance", subtitle: "Open garden cafe entrance" },
+    { src: "/images/lake-sunset.webp", title: "Golden Lake Sunset", subtitle: "Evening views across the water" },
+    { src: "/images/lake-view-tree.webp", title: "Lantern Tree & Seating", subtitle: "Lakeside garden ambiance" },
+    { src: "/images/lake-panorama.webp", title: "Lake View by Dusk", subtitle: "Peaceful water reflections" },
+    { src: "/images/cafe-exterior.webp", title: "Evening Entrance", subtitle: "Open garden cafe entrance" },
   ];
 
   return (

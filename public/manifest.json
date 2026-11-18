@@ -1,0 +1,16 @@
+{
+  "name": "The Indian Cafe - Digital Menu",
+  "short_name": "Indian Cafe",
+  "description": "Digital Menu for The Indian Cafe, Lake View, Bhavnagar. 100% Pure Vegetarian.",
+  "start_url": "/menu?src=pwa",
+  "display": "standalone",
+  "background_color": "#F5E8D6",
+  "theme_color": "#2D4027",
+  "icons": [
+    {
+      "src": "/images/category_icons/01_pizza.webp",
+      "sizes": "140x140",
+      "type": "image/webp"
+    }
+  ]
+}

@@ -7,12 +7,12 @@ export default function WelcomePage() {
     <div className="relative flex h-dvh w-full flex-col justify-end overflow-hidden bg-[#2D4027]">
       {/* Hero photo containing authentic TIC branding & entrance */}
       <Image
-        src="/images/hero-night.png"
+        src="/images/hero-night.webp"
         alt="The Indian Cafe - Lake View, Bhavnagar"
         fill
         className="object-cover object-center"
         priority
-        quality={95}
+        quality={85}
       />
 
       {/* Explore Menu button positioned cleanly over the ground near bottom */}

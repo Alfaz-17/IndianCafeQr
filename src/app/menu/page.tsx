@@ -11,12 +11,12 @@ export default function MenuCategoriesPage() {
       {/* Screen 02 Top Banner using the authentic 2-Screen.png artwork */}
       <div className="relative w-full aspect-[1182/845] overflow-hidden">
         <Image
-          src="/images/2-screen.png"
+          src="/images/2-screen.webp"
           alt="The Indian Cafe - Lake View, Bhavnagar"
           fill
           className="object-cover object-top"
           priority
-          quality={95}
+          quality={85}
         />
 
         {/* Floating Top Controls (Info hamburger & Search overlay) */}
