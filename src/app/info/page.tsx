@@ -10,65 +10,34 @@ export const metadata = {
 
 export default function InfoPage() {
   const galleryImages = [
-    { src: "/images/lake-sunset.webp", title: "Golden Lake Sunset", subtitle: "Evening views across the water" },
-    { src: "/images/lake-view-tree.webp", title: "Lantern Tree & Seating", subtitle: "Lakeside garden ambiance" },
-    { src: "/images/lake-panorama.webp", title: "Lake View by Dusk", subtitle: "Peaceful water reflections" },
-    { src: "/images/cafe-exterior.webp", title: "Evening Entrance", subtitle: "Open garden cafe entrance" },
+    { src: "/images/lake-sunset.webp", alt: "Sunset over the lake beside the cafe" },
+    { src: "/images/lake-view-tree.webp", alt: "Warm lights among the lakeside trees" },
+    { src: "/images/lake-panorama.webp", alt: "The lake at dusk" },
+    { src: "/images/cafe-exterior.webp", alt: "The cafe entrance in the evening" },
   ];
 
   return (
     <div className="min-h-screen bg-[#F5E8D6] pb-12 text-[#2A2118]">
-      {/* 01. Top Brand Header */}
-      <div className="relative mx-3 mt-3 overflow-hidden rounded-3xl bg-[#2D4027] px-6 pt-5 pb-6 text-center text-[#F5E8D6] shadow-md">
-        {/* Top bar back button */}
-        <div className="flex items-center justify-between mb-2">
-          <Link
-            href="/menu"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-[#F5E8D6] backdrop-blur-sm transition hover:bg-white/25 active:scale-95"
-            aria-label="Back to menu"
-          >
-            <ChevronLeft size={20} strokeWidth={2.5} />
-          </Link>
-          <span className="text-[10px] font-bold tracking-[0.25em] text-[#EEDFC9]/70 uppercase">
-            ESTD 2021
-          </span>
-          <div className="w-9" />
-        </div>
-
-        {/* TIC Coffee Cup Logo */}
-        <div className="mx-auto mb-2.5 flex h-16 w-16 items-center justify-center rounded-full bg-[#1F2B1A]/60 border border-[#C97836]/40 shadow-inner">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#C97836"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
-            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-            <line x1="6" y1="1" x2="6" y2="4" />
-            <line x1="10" y1="1" x2="10" y2="4" />
-            <line x1="14" y1="1" x2="14" y2="4" />
-          </svg>
-        </div>
-
-        {/* Cafe Name */}
-        <h1
-          className="text-2xl font-black tracking-wider text-white"
-          style={{ fontFamily: "var(--font-display-var)" }}
+      <header
+        className="relative w-full overflow-hidden bg-[#2D4027]"
+        style={{ height: "clamp(160px, 47.4vw, 212px)" }}
+      >
+        <Image
+          src="/images/info-banner.png"
+          alt="The Indian Cafe at Lake View, Bhavnagar — Our Info"
+          fill
+          priority
+          sizes="(max-width: 448px) 100vw, 448px"
+          className="object-cover"
+        />
+        <Link
+          href="/menu"
+          aria-label="Back to menu"
+          className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#2D4027]/75 text-[#F5E8D6] shadow backdrop-blur-sm transition hover:bg-[#2D4027] active:scale-95"
         >
-          THE INDIAN CAFE
-        </h1>
-        <p
-          className="mt-0.5 text-base text-[#C97836]"
-          style={{ fontFamily: "var(--font-script-var)" }}
-        >
-          Good Food • Great Vibes
-        </p>
-      </div>
+          <ChevronLeft size={20} strokeWidth={2.5} />
+        </Link>
+      </header>
 
       <div className="px-5 pt-5 space-y-5">
         {/* 02. Location and Timings */}
@@ -177,29 +146,25 @@ export default function InfoPage() {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 items-start gap-x-3 gap-y-1">
             {galleryImages.map((img, i) => (
-              <div
+              <figure
                 key={i}
-                className="group flex flex-col overflow-hidden rounded-2xl bg-[#EEDFC9] border border-[#EEDFC9] shadow-sm"
+                className={`group min-w-0 overflow-hidden rounded-2xl bg-[#EEDFC9] shadow-sm ${i % 2 === 1 ? "mt-7" : ""}`}
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{ aspectRatio: i % 2 === 0 ? "1 / 1" : "4 / 5" }}
+                >
                   <Image
                     src={img.src}
-                    alt={img.title}
+                    alt={img.alt}
                     fill
+                    sizes="(max-width: 448px) 48vw, 210px"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-2.5">
-                  <p className="text-xs font-semibold text-[#2A2118] leading-tight">
-                    {img.title}
-                  </p>
-                  <p className="text-[10px] text-[#2A2118]/60 mt-0.5 leading-tight">
-                    {img.subtitle}
-                  </p>
-                </div>
-              </div>
+              </figure>
             ))}
           </div>
         </div>
