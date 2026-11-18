@@ -72,7 +72,7 @@ export default function MenuCategoriesPage() {
         </Link>
       </div>
 
-      {/* 4x5 Category Cards Grid with Real Food Cutout Pics */}
+      {/* 4x5 Category Cards Grid with Category Photos */}
       <div className="px-4 mt-2">
         <div className="grid grid-cols-4 gap-2.5 sm:gap-3">
           {categories.map((c, index) => (
