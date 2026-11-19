@@ -22,11 +22,11 @@ export default function JainMenuPage() {
 
   return (
     <div className="min-h-screen bg-[#F5E8D6] pb-12 text-[#2A2118]">
-      {/* Top Header with Back, Brand, and Language Toggle */}
-      <div className="relative px-4 pt-4 pb-3 flex items-center justify-between">
+      {/* Sticky Top Header with Back, Brand, and Language Toggle */}
+      <header className="sticky top-0 z-50 bg-[#F5E8D6] px-4 py-2 flex items-center justify-between border-b border-[#2A2118]/10 shadow-xs">
         <Link
           href="/menu"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/70 text-[#2D4027] shadow-sm backdrop-blur-sm transition hover:bg-white active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-[#2D4027] shadow-sm backdrop-blur-sm transition hover:bg-white active:scale-95 border border-[#2D4027]/10"
           aria-label="Back to menu"
         >
           <ChevronLeft size={22} strokeWidth={2.5} />
@@ -51,10 +51,10 @@ export default function JainMenuPage() {
         </div>
 
         <LanguageToggle variant="light" />
-      </div>
+      </header>
 
       {/* Hero Green Curved Header */}
-      <div className="relative mx-3 overflow-hidden rounded-3xl bg-[#2D4027] px-6 pt-5 pb-6 text-center text-[#F5E8D6] shadow-md">
+      <div className="relative mx-3 mt-3 overflow-hidden rounded-3xl bg-[#2D4027] px-6 pt-5 pb-6 text-center text-[#F5E8D6] shadow-md">
         <div className="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-emerald-300">
           <Leaf size={24} />
         </div>
