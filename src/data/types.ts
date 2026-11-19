@@ -4,9 +4,11 @@ export type Category = {
   name: string;
   nameGu?: string;
   tagline?: string;
-  icon: string; // lucide icon name
+  taglineGu?: string;
+  icon: string;
   order: number;
   addOnNote?: string;
+  addOnNoteGu?: string;
 };
 
 export type MenuItem = {
@@ -26,5 +28,6 @@ export type JainItem = {
   id: string;
   categoryId: string;
   name: string;
+  nameGu?: string;
   price: number;
 };

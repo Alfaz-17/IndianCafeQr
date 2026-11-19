@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { clsx } from "clsx";
 import type { Category } from "@/data/types";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function CategoryChips({
   categories,
@@ -11,6 +12,9 @@ export function CategoryChips({
   categories: Category[];
   activeSlug: string;
 }) {
+  const { language } = useLanguage();
+  const isGu = language === "gu";
+
   return (
     <div className="sticky top-0 z-30 bg-[#F5E8D6]/95 backdrop-blur-sm border-b border-[#EEDFC9]">
       <div className="flex gap-2 overflow-x-auto px-4 py-3 no-scrollbar">
@@ -25,7 +29,7 @@ export function CategoryChips({
                 : "bg-[#EEDFC9] text-[#2A2118] hover:bg-[#e6d5bd]"
             )}
           >
-            {c.name}
+            {isGu && c.nameGu ? c.nameGu : c.name}
           </Link>
         ))}
       </div>

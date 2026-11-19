@@ -19,7 +19,7 @@ export default function WelcomePage() {
       <div className="relative z-10 flex flex-col items-center pb-12 px-6">
         <Link
           href="/menu"
-          className="group flex items-center justify-between gap-4 rounded-full bg-[#EEDFC9] py-3.5 pl-7 pr-4 text-[17px] font-semibold text-[#2A2118] shadow-2xl transition-all duration-300 hover:bg-[#F5E8D6] hover:scale-105 active:scale-95"
+          className="menu-cta-micro group flex items-center justify-between gap-4 rounded-full bg-[#EEDFC9] py-3.5 pl-7 pr-4 text-[17px] font-semibold text-[#2A2118] shadow-2xl transition-all duration-300 hover:bg-[#F5E8D6] hover:scale-105 active:scale-95"
           style={{ fontFamily: "var(--font-sans-var)" }}
         >
           <span>Explore Menu</span>

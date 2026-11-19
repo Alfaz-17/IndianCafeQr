@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -28,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
 
@@ -52,7 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full flex flex-col antialiased">
-        <main className="flex-1 mx-auto w-full max-w-md">{children}</main>
+        <LanguageProvider>
+          <main className="flex-1 mx-auto w-full max-w-md">{children}</main>
+        </LanguageProvider>
       </body>
     </html>
   );

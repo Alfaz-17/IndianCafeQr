@@ -5,12 +5,15 @@ import { Search, X } from "lucide-react";
 import { items } from "@/data/menu";
 import { categories } from "@/data/categories";
 import { formatPriceShort } from "@/lib/format";
+import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export function SearchOverlay() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const { language } = useLanguage();
+  const isGu = language === "gu";
 
   const results = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -25,14 +28,16 @@ export function SearchOverlay() {
   }, [query]);
 
   const getCategoryName = (categoryId: string) => {
-    return categories.find((c) => c.id === categoryId)?.name || categoryId;
+    const cat = categories.find((c) => c.id === categoryId);
+    if (!cat) return categoryId;
+    return isGu && cat.nameGu ? cat.nameGu : cat.name;
   };
 
   return (
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-md transition hover:bg-black/55 shadow"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-md transition hover:bg-black/55 shadow active:scale-95"
         aria-label="Search menu"
       >
         <Search size={18} strokeWidth={2.2} />
@@ -54,7 +59,7 @@ export function SearchOverlay() {
                   <input
                     autoFocus
                     type="text"
-                    placeholder="Search for paneer, pizza, coffee..."
+                    placeholder={isGu ? "શોધો: પિઝા, પનીર, કોફી..." : "Search for paneer, pizza, coffee..."}
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     className="w-full rounded-full bg-[#EAD7BE]/50 py-2.5 pl-10 pr-4 text-sm text-[#2A2118] placeholder:text-[#2A2118]/40 outline-none focus:ring-2 focus:ring-[#C8793A]/30"
@@ -72,7 +77,7 @@ export function SearchOverlay() {
               <div className="overflow-y-auto px-4 py-2" style={{ maxHeight: "calc(100vh - 72px)" }}>
                 {query && results.length === 0 && (
                   <p className="py-12 text-center text-sm text-[#2A2118]/50">
-                    No items found for &ldquo;{query}&rdquo;
+                    {isGu ? `"${query}" માટે કશું મળ્યું નથી` : `No items found for "${query}"`}
                   </p>
                 )}
                 <ul>
@@ -84,10 +89,17 @@ export function SearchOverlay() {
                         className="flex items-center justify-between py-3 border-b border-[#2A2118]/5"
                       >
                         <div>
-                          <p className="text-sm font-medium text-[#2A2118]">{item.name}</p>
-                          <p className="text-xs text-[#C8793A]">{getCategoryName(item.categoryId)}</p>
+                          <p className="text-sm font-semibold text-[#2A2118]">
+                            {isGu && item.nameGu ? item.nameGu : item.name}
+                          </p>
+                          <p className="text-xs text-[#C8793A] font-medium">
+                            {getCategoryName(item.categoryId)}
+                            {isGu && item.nameGu && (
+                              <span className="text-[#2A2118]/40 ml-2">({item.name})</span>
+                            )}
+                          </p>
                         </div>
-                        <span className="text-sm font-bold text-[#5B3A29] tabular-nums">
+                        <span className="text-sm font-bold text-[#2D4027] tabular-nums">
                           {formatPriceShort(item.price)}
                         </span>
                       </Link>
@@ -96,7 +108,7 @@ export function SearchOverlay() {
                 </ul>
                 {!query && (
                   <p className="py-12 text-center text-sm text-[#2A2118]/40">
-                    Type to search across all categories
+                    {isGu ? "તમામ વાનગીઓ શોધવા માટે લખો" : "Type to search across all categories"}
                   </p>
                 )}
               </div>

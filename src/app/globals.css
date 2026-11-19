@@ -29,3 +29,30 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes menu-cta-micro {
+  0%,
+  84%,
+  100% {
+    translate: 0 0;
+    scale: 1;
+  }
+  87% {
+    translate: 0 -2px;
+    scale: 1.01;
+  }
+  90% {
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+.menu-cta-micro {
+  animation: menu-cta-micro 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-cta-micro {
+    animation: none;
+  }
+}
