@@ -20,7 +20,7 @@ export const categories: Category[] = [
     nameGu: "ગાર્લિક બ્રેડ",
     tagline: "Golden & Crispy",
     taglineGu: "ગોલ્ડન અને ક્રિસ્પી",
-    icon: "/images/category_icons/18_onion_rings.webp",
+    icon: "/images/category_icons/cheese-garlic-bread.webp",
     order: 2,
     addOnNote: "Extra Cheese +₹20",
     addOnNoteGu: "વધારાનું ચીઝ +₹20",
@@ -76,7 +76,7 @@ export const categories: Category[] = [
     nameGu: "મેગી",
     tagline: "2-Minute Happiness",
     taglineGu: "દરેકની મનપસંદ મેગી",
-    icon: "/images/category_icons/16_soup.webp",
+    icon: "/images/category_icons/noodles.webp",
     order: 7,
   },
   {
@@ -130,7 +130,7 @@ export const categories: Category[] = [
     nameGu: "મોમોસ",
     tagline: "Steamed & Spiced",
     taglineGu: "ગરમાગરમ સ્ટીમ્ડ મોમોસ",
-    icon: "/images/category_icons/15_falafel_snacks.webp",
+    icon: "/images/category_icons/momos.webp",
     order: 12,
   },
   {
@@ -150,7 +150,7 @@ export const categories: Category[] = [
     nameGu: "વેફલ",
     tagline: "Sweet Indulgence",
     taglineGu: "ક્રિસ્પી ચોકલેટ વેફલ",
-    icon: "/images/category_icons/14_cheesecake.webp",
+    icon: "/images/category_icons/chocolate-waffles.webp",
     order: 14,
   },
   {
@@ -200,7 +200,7 @@ export const categories: Category[] = [
     nameGu: "કોલ્ડ ડ્રિંક્સ",
     tagline: "Chilled & Ready",
     taglineGu: "ચીલ્ડ સોફ્ટ ડ્રિંક્સ (MRP)",
-    icon: "/images/category_icons/08_mocktail.webp",
+    icon: "/images/category_icons/drinks.webp",
     order: 19,
   },
   {

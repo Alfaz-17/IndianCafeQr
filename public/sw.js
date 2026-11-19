@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tic-menu-cache-v1';
+const CACHE_NAME = 'tic-menu-cache-v3';
 
 const STATIC_ASSETS = [
   '/',
@@ -7,6 +7,12 @@ const STATIC_ASSETS = [
   '/jain',
   '/images/hero-night.webp',
   '/images/2-screen.webp',
+  '/images/info-screen.webp',
+  '/images/category_icons/cheese-garlic-bread.webp',
+  '/images/category_icons/drinks.webp',
+  '/images/category_icons/chocolate-waffles.webp',
+  '/images/category_icons/momos.webp',
+  '/images/category_icons/noodles.webp',
   '/images/category_icons/01_pizza.webp',
   '/images/category_icons/02_burger.webp',
   '/images/category_icons/03_grill_sandwich.webp',

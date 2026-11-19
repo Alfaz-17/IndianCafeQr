@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
-import { MapPin, Clock, ChevronLeft } from "lucide-react";
+import { MapPin, Clock, ChevronLeft, Leaf } from "lucide-react";
 
 export const metadata = {
   title: "Cafe Information | The Indian Cafe",
@@ -125,9 +125,7 @@ export default function InfoPage() {
         {/* 03. Pure Vegetarian Banner */}
         <div className="rounded-2xl bg-[#2D4027]/10 p-4 border border-[#2D4027]/20 flex items-center gap-3.5">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2D4027] text-white flex-shrink-0 shadow-sm">
-            <div className="h-4 w-4 rounded-sm border-2 border-white flex items-center justify-center">
-              <div className="h-2 w-2 rounded-full bg-white" />
-            </div>
+            <Leaf size={21} strokeWidth={1.8} aria-hidden="true" />
           </div>
           <div>
             <p className="text-sm font-bold text-[#2D4027]">100% Pure Vegetarian</p>
