@@ -34,7 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
 
         {/* Preload critical artwork for instant rendering */}
-        <link rel="preload" as="image" href="/images/hero-night.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/hero-day.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/images/hero-night.webp" type="image/webp" />
         <link rel="preload" as="image" href="/images/2-screen.webp" type="image/webp" />
 
         {/* Lightweight PWA / Offline Service Worker Registration */}

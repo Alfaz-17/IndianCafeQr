@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tic-menu-cache-v3';
+const CACHE_NAME = 'tic-menu-cache-v4';
 
 const STATIC_ASSETS = [
   '/',
@@ -6,6 +6,7 @@ const STATIC_ASSETS = [
   '/info',
   '/jain',
   '/images/hero-night.webp',
+  '/images/hero-day.webp',
   '/images/2-screen.webp',
   '/images/info-screen.webp',
   '/images/category_icons/cheese-garlic-bread.webp',

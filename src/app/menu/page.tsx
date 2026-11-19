@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/data/categories";
+import { siteConfig } from "@/data/site";
 import { CategoryCard } from "@/components/CategoryCard";
 import { SearchOverlay } from "@/components/SearchOverlay";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -105,6 +106,34 @@ export default function MenuCategoriesPage() {
             ? "ધ ઇન્ડિયન કેફે • લેક વ્યુ, ભાવનગર"
             : "The Indian Cafe • Lake View, Bhavnagar"}
         </p>
+
+        {/* Instagram Link Button */}
+        <div className="mt-3">
+          <a
+            href={siteConfig.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-[#EEDFC9] px-3.5 py-1.5 text-xs font-semibold text-[#2D4027] shadow-sm hover:bg-[#e4d3bb] transition active:scale-95 border border-[#2D4027]/15"
+          >
+            <svg
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-[#C97836]"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span>@the_indian_cafe_</span>
+          </a>
+        </div>
       </div>
     </div>
   );
